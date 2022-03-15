@@ -1,0 +1,217 @@
+! ft.lcdfilter:  lcddefault
+! Xft.antialias:  true
+! Xft.rgba:       rgb
+! Xft.hinting:    true
+! Xft.hintstyle:  hintslight
+! Xcursor.size:   16
+
+! xscreensaver.newLoginCommand:
+
+xterm*background:   #1e222a
+xterm*foreground:   #c8ccd4
+xterm*faceName:   "Inconsolata Regular"
+xterm*faceSize:	12
+xterm*vt100.allowTitleOps:   false
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
+rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
+
+! URxvt.font: xft:FontAwesome Regular:size=12, xft:Ubuntu Mono:size=9 
+! URxvt.font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-1
+! URxvt.font: xft:Inconsolata Nerd Font Mono Regular:size=12
+URxvt.font: xft:JetBrainsMonoMedium Nerd Font Medium:size=10, xft:Material Regular:size=12
+!URxvt.font: xft:Terminus:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12, \ -*-fontawesome-*-*-*-*-*-*-*-*-*-*-*-*
+URxvt.letterSpace: -1 
+
+! URxvt*letterSpace: -2
+ 
+! icone barra de titulo
+URxvt.iconFile:   /usr/share/icons/Adwaita/scalable/apps/utilities-terminal-symbolic.svg
+ 
+URxvt.perl-ext-common: 			default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher: 		firefox
+URxvt.url-select.underline:		true
+URxvt.keysym.M-u: 					perl:url-select:select_next
+URxvt.keysym.M-Escape: 			perl:keyboard-select:activate
+URxvt.keysym.M-s: 						perl:keyboard-select:search
+! URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+! URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
+
+! Restore Ctrl+Shift+(c|v)
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+ 
+! teclas home,end terminal urxvt
+! URxvt*keysym.Home: \033[1~
+! URxvt*keysym.End: \033[4~
+ 
+! teclas home,end nano-editor
+URxvt.keysym.Home: \033OH
+URxvt.keysym.End:  \033OF
+URxvt.keysym.KP_Home: \033OH
+URxvt.keysym.KP_End:  \033OF
+ 
+ 
+! transparencia real
+URxvt.depth: 32
+URxvt.background: [65]#000000
+ 
+! barra de rolagem
+URxvt.scrollBar: true
+ 
+ 
+! fontes urxvt:
+! URxvt.font: xft:Ubuntu Mono:size=12
+ 
+ 
+! enabling clickable links:
+ 
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+ 
+! urxvt scrolling options and cursor style:
+ 
+URxvt*saveLines: 12000
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+ 
+! urxvt tabs settings:
+ 
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 2
+URxvt.tabbed.tab-bg: 8
+URxvt.tabbed.autohide:  yes
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title: no
+ 
+URxvt.mouseWheelScrollPage: true
+ 
+! urxvt color scheme:
+ 
+!URxvt*.transparent: true
+URxvt*background: #000000
+URxvt*foreground: #00AAAA
+URxvt*cursorColor: #AAAAAA
+URxvt*colorUL: #86a2b0
+
+! transparency ( 0.1 to 0.9 values)
+! st.alpha: 0.8 
+
+! inner padding
+! st.borderpx:          15
+! st.font:         JetBrainsMono Nerd Font:style:medium:pixelsize=15
+
+!! Colors
+
+!! Dracula  palette
+! *.foreground: #F8F8F2
+! *.background: #282A36
+
+!! black + grey
+! *.color0:     #000000
+! *.color8:     #4D4D4D
+
+!! dark red + red
+! *.color1:     #FF5555
+! *.color9:     #FF6E67
+
+!! green
+! *.color2:     #50FA7B
+! *.color10:    #5AF78E
+
+!! yellow
+! *.color3:     #F1FA8C
+! *.color11:    #F4F99D
+
+!! purple
+! *.color4:     #BD93F9
+! *.color12:    #CAA9FA
+
+!! pink
+! *.color5:     #FF79C6
+! *.color13:    #FF92D0
+
+!! cyan
+! *.color6:     #8BE9FD
+! *.color14:    #9AEDFE
+
+!! white
+! *.color7:     #BFBFBF
+! *.color15:    #E6E6E6
+
+
+Xft.antialias:	1
+Xft.hinting:	1
+Xft.autohint:	0
+Xft.hintstyle:	hintslight
+Xft.rgba:	rgb
+Xft.lcdfilter:	lcddefault
+
+! window padding
+st.borderpx: 20
+
+!-- values between 0.1  - 1.0 --! 
+
+st.alpha: 0.8 
+st.font:           JetBrainsMono Nerd Font:style:medium:pixelsize=15
+
+#define base00 #282c34
+#define base01 #353b45
+#define base02 #3e4451
+#define base03 #545862
+#define base04 #565c64
+#define base05 #abb2bf
+#define base06 #b6bdca
+#define base07 #c8ccd4
+#define base08 #e06c75
+#define base09 #d19a66
+#define base0A #e5c07b
+#define base0B #98c379
+#define base0C #56b6c2
+#define base0D #61afef
+#define base0E #c678dd
+#define base0F #be5046
+
+*foreground:   base07
+*background:   #1e222a
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+*color16:      base0F
+
+! just remove this if you dont use my tabbed
+
+tabbed.selfgcolor:   #d6d8eb
+tabbed.selbgcolor:   #1e222a
+
+tabbed.normfgcolor:  #9294a8
+tabbed.normbgcolor:  #282c34
+
