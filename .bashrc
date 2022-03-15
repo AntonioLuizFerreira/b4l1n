@@ -10,8 +10,6 @@ export SUDO_ASKPASS="/usr/lib/ssh/x11-ssh-askpass"
 export PATH="$PATH:~/.local/bin"
 # export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 
-export DZR_CBC=g4el58wc0zvf9na1
-
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
