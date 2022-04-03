@@ -1,0 +1,19 @@
+#!/bin/bash
+
+lockLine=$(xset -q | grep "Num Lock")
+
+capsLock=$(echo "${lockLine}" | awk -F ' ' '{print $4}')
+numLock=$(echo "${lockLine}" | awk -F ' ' '{print $8}')
+scrollLock=$(echo "${lockLine}" | awk -F ' ' '{print $12}')
+
+if [[ "${numLock}" == "on" ]] && [[ "${capsLock}" == "on" ]]; then
+  echo "  "
+elif [[ "${numLock}" == "on" ]]; then
+  echo " "
+elif [[ "${capsLock}" == "on" ]]; then
+  echo " "
+elif [[ "${scrollLock}" == "on" ]]; then
+  echo "ScrollLock"
+else
+  echo ""
+fi

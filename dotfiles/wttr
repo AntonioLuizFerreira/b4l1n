@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#curl -s https://wttr.in/?format="%c+%t"
+
+#curl -s https://wttr.in/$LOCATION?format="%C+%c+%t"
+
+# curl "https://wttr.in/$LOCATIONB?format="%c"" && curl -Ss 'https://wttr.in?0&T&Q+%c' | cut -c 16- | head -2 | xargs echo
+
+curl -s https://wttr.in/-32.031424,-52.080672?format="%c+%t" | sed 's/\xef\xb8\x8f//'
+
