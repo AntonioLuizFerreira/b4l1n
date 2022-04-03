@@ -1,0 +1,6 @@
+#!/bin/bash
+# this must be the last command, and it must be 'non forking', as expected by 'xautolock'
+# i3lock -n -e -f -i /home/ferreira/Imagens/jarvis.png
+
+i3lock -i /home/ferreira/Pictures/jarvis.png -p default -n &
+# sleep 5s && xset dpms force off 
