@@ -1,3 +1,0 @@
-#!/bin/bash 
-
-sensors | awk '/NB Temp: +/ {print "", $3}'
