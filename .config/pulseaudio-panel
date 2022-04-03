@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pulseaudio-control --icons-volume "🔈 ,🔉 ,🔊 " --icon-muted "🔇 " --sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo/analog-output-headphones:🎧" --sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo/analog-output-lineout:ﰝ " --sink-nickname "alsa_output.usb-C-Media_Electronics_Inc._USB_PnP_Sound_Device-00.analog-stereo:🎧 USB" listen

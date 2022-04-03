@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+sensors it8620-isa-0228 | awk '/CPU Temp: +/ {print "", $3}'

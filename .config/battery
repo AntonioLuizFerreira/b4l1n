@@ -1,0 +1,49 @@
+#!/bin/bash
+
+BATTERY=0
+BATTERY_INFO=$(acpi -b | grep "Battery ${BATTERY}")
+BATTERY_STATE=$(echo "${BATTERY_INFO}" | grep -wo "Full\|Charging\|Discharging")
+BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' | tr -d '%')
+
+#URGENT_VALUE=10
+#$(echo "${$(acpi -b | grep "Battery 0")}" | grep -o '[0-9]\+%' | tr -d '%')
+
+ICON=""
+
+if { (( "${BATTERY_POWER}" > "0" )) && (( "${BATTERY_POWER}" < "11" )); }; then
+    ICON=""
+elif { (( "${BATTERY_POWER}" > "10" )) && (( "${BATTERY_POWER}" < "41" )); }; then
+    ICON=""
+elif { (( "${BATTERY_POWER}" > "40" )) && (( "${BATTERY_POWER}" < "76" )); }; then
+    ICON=""
+elif { (( "${BATTERY_POWER}" > "75" )) && (( "${BATTERY_POWER}" < "91" )); }; then
+    ICON=""
+elif (( "${BATTERY_POWER}" > "90" )); then
+    ICON=""
+fi
+
+if [[ "${BATTERY_STATE}" = "Charging" ]]; then
+  echo " $ICON ${BATTERY_POWER}%"
+  #echo " $ICON ${BATTERY_POWER}%"
+  echo ""
+elif [[ "${BATTERY_STATE}" = "Discharging" ]]; then
+  echo "$ICON ${BATTERY_POWER}%"
+  #echo "$ICON ${BATTERY_POWER}%"
+  echo ""
+elif [[ "${BATTERY_STATE}" = "Full" ]]; then
+  echo "  ${BATTERY_POWER}%"
+  #echo "  ${BATTERY_POWER}%"
+  echo ""
+elif [[ "${BATTERY_INFO}" = "" ]]; then
+  echo "$ICON "
+  #echo "$ICON "
+  echo ""
+else
+  echo "$ICON ${BATTERY_POWER}%"
+  #echo "$ICON ${BATTERY_POWER}"
+  echo ""
+fi
+
+#if [[ "${BATTERY_POWER}" -le "${URGENT_VALUE}" ]]; then
+#  exit 33
+#fi

@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+sensors | awk '/Core 2: +/ {print "2", $3}'

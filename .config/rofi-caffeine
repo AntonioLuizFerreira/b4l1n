@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+question=$(echo " Ligar | Desligar| Bloquear" | rofi -theme /usr/share/rofi/themes/arthur.rasi -font "Noto Sans Bold 18" -sep "|" \
+    -dmenu -i -p 'System: ' "" -width 20 -hide-scrollbar \
+    -eh 1 -line-padding 4 -padding 20 -lines 4 -color-enabled)
+
+case $question in
+    *Ligar)
+        #command -v gnome-session-quit 2>/dev/null 2>&1 || command -v session-logout >/dev/null 2>&1
+        sleep 1; xset s 600 900 1200 && exec xautolock -detectsleep -locker "/home/ferreira/.local/bin/lockscreen" -time 10  -corners -000 &
+        ;;
+    *Desligar)
+        sleep 1; xset s off -dpms && xautolock -exit
+        ;;
+    *Bloquear)
+        xautolock -locknow
+        ;;
+    *)
+        exit 0  # do nothing on wrong response
+        ;;
+esac
+
