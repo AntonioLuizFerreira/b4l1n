@@ -1,0 +1,5 @@
+#!/bin/bash
+
+~/.config/i3/pulseaudio-rofi --volume_up
+
+dunstify -i audio-volume-high "$(pamixer --get-volume-human)"

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pacmd list-sinks | awk '/^\s+name: /{indefault = $2 == "'"<alsa_output.pci-0000_00_1b.0.analog-stereo>"'"}
+              /^\s+muted: / && indefault {muted=$2}
+              /^\s+volume: / && indefault {volume="🔊 "$5}
+              END { print muted=="no"?volume:"🔇 Mudo" }'
+

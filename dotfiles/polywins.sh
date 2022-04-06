@@ -47,13 +47,13 @@ main() {
 
 raise_or_minimize() {
   if [ "$(get_active_wid)" = "$1" ]; then
-    bspc node $1 -g hidden=on
+    # bspc node $1 -g hidden=on
     #wmctrl -ir "$1" -b toggle,hidden
-    # xdotool key alt+q
+    xdotool key alt+q
   else
-    bspc node $1 -g hidden=off -f
+    # bspc node $1 -g hidden=off -f
     #wmctrl -ia "$1"
-    # xdotool key alt+shift+q
+    xdotool key alt+shift+q
   fi
 }
 

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pulseaudio-control togmute
+
+dunstify -i audio-volume-muted "$(pamixer --get-volume-human)"
