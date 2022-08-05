@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# If you use pywal, you need to restore the scheme here
+# (cat ~/.cache/wal/sequences &)
+
+# export NNN_BMS="D:$HOME/Downloads;v:$HOME/Videos"
+# export NNN_COLORS="5236"
+# alias nsel="cat ${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection | tr '\0' '\n'"
+
+# To use a CLI opener, specify the `-c` option to `nnn`
+# export NNN_OPENER="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/plugins/nuke"
+
+export NNN_OPTS="Hcerx"
+export LC_COLLATE="C"
+export NNN_BMS="m:/run/user/$UID/gvfs;u:$HOME/Documents;p:$HOME/Pictures;e:$HOME/Retropie;r:$HOME/RPG;i:$HOME/.config/i3;k:$HOME/.config/kitty;d:$HOME/Downloads/"
+export NNN_COLORS="2136"
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG='j:autojump;c:fzcd;f:finder;o:fzopen;m:mtpmount;t:nmount;i:imgview;p:preview-tui;x:!chmod +x $nnn;s:!smplayer $nnn;e:-!sudo -E nvim $nnn*'
+export SPLIT='v'
+# export NNN_FCOLORS='030304020006060801050501'
+
+#alias nnn='nnn -e'
+#alias ls='nnn -e'
+
+# BLK="0B" CHR="0B" DIR="04" EXE="06" REG="00" HARDLINK="06" SYMLINK="06" MISSING="00" ORPHAN="09" FIFO="06" SOCK="0B" OTHER="06"
+# export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
+
+BLK="04" CHR="04" DIR="04" EXE="00" REG="00" HARDLINK="00" SYMLINK="06" MISSING="00" ORPHAN="01" FIFO="0F" SOCK="0F" OTHER="02"
+export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
+
+
+# Unmask ^Q (if required, see `stty -a`) to Quit nnn
+stty start undef
+stty stop undef
+
+# Start nnn with your preferred options
+nnn -P p "$@"
